@@ -178,17 +178,24 @@
             <pattern>%d{HH:mm:ss.SSS} - %msg%n</pattern>
         </encoder>
     </appender>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} - %msg%n</pattern>
+            <charset>utf8</charset>
+        </encoder>
+    </appender>
 
     <root>
         <level value="${log.root.level}"/>
         <appender-ref ref="MPUSH_APPENDER"/>
         <appender-ref ref="MPUSH_INFO_APPENDER"/>
         <appender-ref ref="MPUSH_DEBUG_APPENDER"/>
+        <appender-ref ref="CONSOLE"/>
     </root>
 
     <logger name="console" additivity="false">
         <level value="debug"/>
-        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="CONSOLE"/>
     </logger>
     <logger name="mpush.conn.log" additivity="false">
         <level value="debug"/>

@@ -47,7 +47,7 @@ public class PushServiceImpl implements PushService {
     @Resource
     private PushSender mpusher;
 
-    private final AtomicLong msgIdSeq = new AtomicLong(1);//TODO业务自己处理
+    private final AtomicLong msgIdSeq = new AtomicLong(1);//TODO 业务自己处理
 
     @Override
     public boolean notify(String userId, NotifyDO notifyDO) {

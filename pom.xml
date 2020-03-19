@@ -227,12 +227,6 @@
             <properties>
                 <deploy.env>dev</deploy.env>
             </properties>
-        </profile>
-        <profile>
-            <id>daily</id>
-            <properties>
-                <deploy.env>daily</deploy.env>
-            </properties>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>

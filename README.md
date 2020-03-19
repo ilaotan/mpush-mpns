@@ -36,3 +36,9 @@
 2. http://127.0.0.1:8080/api/admin/list/servers.json 查询mpush server 列表
 3. http://127.0.0.1:8080/api/admin/get/onlineUserNum.json?ip=120.23.43.1 查询mpushServer在线用户数
 
+
+1. 对于不能丢的消息发送之前先存DB 
+2. 发送成功从db删除，这个是有回调的
+3. 提供一个批量查询离线消息的http接口
+4. 客户端上线拉取离线消息，并去重。
+
